@@ -1,5 +1,6 @@
 package com.kimkukan.springboot.domain.post;
 
+import com.kimkukan.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.GenerationType;
 @Getter
 @NoArgsConstructor
 @Entity //Entity 클래스는 DB테이블과 연계되는 클래스, setter를 사용하지 않는다
-public class Post {
+public class Post extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //pk자동생성규정
